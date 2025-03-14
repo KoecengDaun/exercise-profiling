@@ -14,4 +14,5 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<Student, Long> {
     @Query("SELECT s.name FROM Student s")
     List<String> findAllNames();
+    Student findTopByOrderByGpaDesc();
 }
